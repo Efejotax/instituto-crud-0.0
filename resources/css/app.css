@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@plugin "daisyui";
+
+/*Aquí abajo donde definimos nuestras propias clases para el tema: altura y colores*/
+@theme {
+    /*ALTURA en vh (viewport height)*/
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+    /*style="height:10vh"*/
+    --height-header:15vh;
+    --height-main:65vh;
+    --height-footer:10vh;
+    --height-nav:10vh;
+
+    /*COLORES*/
+    /*style="backgroud-color:#ffAAGG"*/
+    --color-header:#56D9E5;
+    --color-nav: #b8b8b8;
+    --color-main:#FFFFFF;
+    --color-footer:#000000;
+    --color-titulo: #0010aa;
+}
+
+/*Aquí definimos nuestras clases*/
+.boton{
+    @apply bg-amber-300 text-5xl
+}
+.myCard {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+
