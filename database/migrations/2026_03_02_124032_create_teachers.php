@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('phone')->nullable()->default(null);
             $table->date('birthday')->nullable()->default(null);
             $table->string('password')->nullable()->default(null);
+            $table->string('department')->nullable()->default(null);
             $table->timestamps();
         });
     }

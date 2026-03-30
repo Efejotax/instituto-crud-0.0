@@ -25,6 +25,7 @@ class TeacherFactory extends Factory
             'phone' => $this->faker->phoneNumber(),
             'birthday' => $this->faker->date(),
             'password' => $this->faker->password(),
+            'department' => $this->faker->jobTitle(),
         ];
     }
 }

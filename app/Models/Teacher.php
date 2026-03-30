@@ -14,7 +14,7 @@ class Teacher extends Model
         'email',
         'phone',
         'birthday',
-        'password'
+        'department',
     ];
 
     static public function getLabels(){
