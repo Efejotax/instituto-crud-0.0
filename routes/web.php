@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\SumaController;
+use App\Http\Controllers\PokeController;
 
 
 // EJEMPLOS INICIALES SENCILLOS
@@ -200,11 +201,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
 // Rutas Auth personalizadas
 //Route::resource("projects", ProjectController::class)->middleware('auth');
 //Route::resource("teachers", TeacherController::class)->middleware('auth');
 //Route::resource("students", StudentController::class)->middleware('auth');
-
 
 
 // LANG: TRADUCCIONES
@@ -212,4 +213,8 @@ Route::middleware('auth')->group(function () {
 Route::post("set_lang",LangController::class)->name("set_lang");
 
 
-
+// POKEMON API externa
+// ruta métod index()
+Route::get('/pokemon', [PokeController::class, 'index'])->name('pokemon.index');
+// ruta metod show()
+Route::get('/pokemon/{name}', [PokeController::class, 'show'])->name('pokemon.show');

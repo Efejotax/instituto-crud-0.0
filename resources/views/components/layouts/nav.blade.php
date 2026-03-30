@@ -20,6 +20,7 @@ px-5 justify-start items-center lg:space-x-2">
     <a href="{{route("raizcuadrada")}}" class="btn btn-glass w-full lg:w-auto">Raiz2</a>
     <a href="{{route("products")}}" class="btn btn-glass w-full lg:w-auto">Productos</a>
     <a href="{{route("projects")}}" class="btn btn-glass w-full lg:w-auto">Proyectos</a>
+    <a href="{{route("pokemon.index")}}" class="btn btn-glass w-full lg:w-auto">Pokemon</a>
 </nav>
 
 
