@@ -18,11 +18,11 @@ class StudentFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'surname' => $this->faker->lastName(),
             'address' => $this->faker->address(),
             'email' => $this->faker->unique()->safeEmail(),
             'phone' => $this->faker->phoneNumber(),
             'birthday' => $this->faker->date(),
+            'course' => $this->faker->jobTitle(),
             'password' => $this->faker->password(),
         ];
     }

@@ -26,7 +26,7 @@
 <body>
 <x-layouts.header />
 <x-layouts.nav />
-<x-pruebas.cabecera>Hola pruebas cabecera</x-pruebas.cabecera>
+<x-pruebas.cabecera>Hola pruebas cabecera genérica</x-pruebas.cabecera>
 
 <main class="lg:h-main bg-main">
     {{$slot}}

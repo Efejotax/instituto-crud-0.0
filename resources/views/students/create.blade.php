@@ -2,7 +2,7 @@
 
     <div class="flex justify-center items-center min-h-full bg-gray-200">
 
-        <form method="POST" action="{{ route('teachers.store') }}" class="bg-white p-4 rounded-2xl">
+        <form method="POST" action="{{ route('students.store') }}" class="bg-white p-4 rounded-2xl">
             @csrf
 
             <!-- Name -->
@@ -29,12 +29,12 @@
                 <x-text-input id="phone" class="block mt-1 w-full" type="text" name="phone" value="{{old('phone')}}" required />
             </div>
 
-            <!-- Department -->
+            <!-- Course -->
             <div class="mt-4">
-                <x-input-label for="department" :value="__('Department')" />
-                <select name="department" class="block mt-1 w-full">
-                    @foreach(config("departments") as $departament)
-                        <option value="{{$departament}}">{{$departament}}</option>
+                <x-input-label for="course" :value="__('Course')" />
+                <select name="course" class="block mt-1 w-full">
+                    @foreach(config("courses") as $course)
+                        <option value="{{$course}}">{{$course}}</option>
                     @endforeach
                 </select>
             </div>
@@ -48,7 +48,7 @@
             <!-- Button -->
             <div class="flex justify-end mt-6">
                 <x-primary-button>
-                    {{ __('Create Teacher') }}
+                    {{ __('Create Student') }}
                 </x-primary-button>
             </div>
 

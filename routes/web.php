@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\SumaController;
 use App\Http\Controllers\PokeController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\StudentController;
+
 
 
 // EJEMPLOS INICIALES SENCILLOS
@@ -39,7 +41,7 @@ Route::view('/welcome','welcome')->name('welcome');
 Route::view('/home','home')->name('home');
 Route::view("sobre_nosotros", "about")->name("about");
 Route::view("noticias", "noticias")->name("noticias");
-Route::view("alumnos", "alumnos")->name("alumnos");
+//Route::view("alumnos", "alumnos")->name("alumnos");
 Route::view("alumno", "alumno")->name("alumno");
 //Route::view("profesores", "profesores")->name("profesores");
 Route::view("profesor", "profesor")->name("profesor");
@@ -149,11 +151,11 @@ Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 Route::resource('teachers', TeacherController::class);
 //Route::get('/teachers', TeacherController::class);
+Route::resource('students', StudentController::class);
+//Route::get('/students', StudentController::class);
 
 
-
-
-// RUTAS PARAMETRIZADAS - Probando rutas con métod GET:
+// RUTAS PARAMETRIZADAS pruebas - Probando rutas con métod GET:
 //Ruta parametrizada --> alumno {$variable?} opcional
 /*Route::get("/alumno/{nombre}/{numero?}/{seccion?}",
     fn($nombre = "Pepe",

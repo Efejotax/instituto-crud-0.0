@@ -1,14 +1,14 @@
 <x-layouts.layout>
     <x-crud
-        resource="teachers"
-        :filas="$teachers"
+        resource="students"
+        :filas="$students"
         :campos="[
                   'name' => 'Nombre',
                   'address' => 'Dirección',
                   'email' => 'Correo',
                   'phone' => 'Teléfono',
-                  'birthday' => 'fecha nac',
-                  'department' => 'departamento'
+                  'birthday' => 'Fecha nac',
+                  'course' => 'Curso'
                   ]" />
 </x-layouts.layout>
 <table>
@@ -16,9 +16,9 @@
         <th>Nombre</th>
         .....
     </tr>
-    @foreach($teachers as $teacher)
+    @foreach($students as $student)
         <tr>
-            <td>{{$teacher->name}}</td>
+            <td>{{$student->name}}</td>
             ....
         </tr>
 

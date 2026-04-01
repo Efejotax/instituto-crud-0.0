@@ -6,6 +6,7 @@ return [
     "phone" => "Phone",
     "birthday" => "Birthday",
     "password" => "Password",
-    "department" => "Department",
+    "course" => "Course",
     "actions" => "Actions",
 ];
+

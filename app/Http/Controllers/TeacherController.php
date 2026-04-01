@@ -10,6 +10,15 @@ use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
+    /*public function index()
+    {
+        $teachers= Teacher::all();
+        return view('teachers.index', compact('teachers'));
+
+    }*/
     public function index(int $page=1){
         //dd($page);
         //$teachers = Teacher::all();

@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable()->default(null);
-            $table->string('surname')->nullable()->default(null);
             $table->string('address');
             $table->string('email')->nullable()->default(null);
             $table->string('phone')->nullable()->default(null);
             $table->date('birthday')->nullable()->default(null);
-            $table->string('password')->nullable()->default(null);
             $table->string('department')->nullable()->default(null);
+            $table->string('password')->nullable()->default(null);
             $table->timestamps();
         });
     }

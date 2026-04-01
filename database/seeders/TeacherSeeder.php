@@ -17,6 +17,6 @@ class TeacherSeeder extends Seeder
         //Teacher::factory()->create();
 
         //crear varios
-        Teacher::factory()->count(10)->create();
+        Teacher::factory()->count(40)->create();
     }
 }

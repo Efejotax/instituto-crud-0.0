@@ -3,7 +3,7 @@
     <div class="flex justify-center items-center min-h-full bg-gray-200">
 
         <form method="POST"
-              action="{{ route('teachers.update', $teacher->id) }}?page={{ request()->get('page') }}"
+              action="{{ route('students.update', $student->id) }}?page={{ request()->get('page') }}"
               onsubmit="return confirmarUpdate(event)"
               class="bg-white p-4 rounded-2xl">
             @csrf
@@ -17,8 +17,8 @@
                     class="block mt-1 w-full"
                     type="text"
                     name="name"
-                    :value="$teacher->name"
-                    value="{{$teacher->name}}"
+                    :value="$student->name"
+                    value="{{$student->name}}"
                     required
                 />
             </div>
@@ -31,21 +31,21 @@
                     class="block mt-1 w-full"
                     type="text"
                     name="phone"
-                    :value="$teacher->phone"
+                    :value="$student->phone"
                     required
                 />
             </div>
 
-            <!-- Department -->
+            <!-- Course -->
             <div class="mt-4">
-                <x-input-label for="department" :value="__('Department')" />
-                <select name="department" >
-                    @foreach(config("departments") as $department)
-                        <option {{ $teacher->department == $department ? "selected" : ""  }} value="{{$department}}">{{$department}}</option>
+                <x-input-label for="course" :value="__('Course')" />
+                <select name="course" >
+                    @foreach(config("courses") as $course)
+                        <option {{ $student->course == $course ? "selected" : ""  }} value="{{$course}}">{{$course}}</option>
                     @endforeach
                 </select>
 
-                @error("department")
+                @error("course")
                 <div class="text-xm text-red-200"> {{$message}}</div>
                 @enderror
             </div>
@@ -58,16 +58,16 @@
                     class="block mt-1 w-full"
                     type="text"
                     name="email"
-                    :value="$teacher->email"
+                    :value="$student->email"
                 />
             </div>
 
             <!-- Button -->
             <div class="flex justify-end mt-6 space-x-2 ">
                 <x-primary-button>
-                    {{ __('Update Teacher') }}
+                    {{ __('Update Student') }}
                 </x-primary-button>
-                <x-href-button class="" href="{{route('teachers.index')}}">
+                <x-href-button class="" href="{{route('students.index')}}">
                     {{ __('Cancelar') }}
                 </x-href-button>
             </div>
@@ -82,7 +82,7 @@
                 e.preventDefault();
 
                 Swal.fire({
-                    title: "¿Quieres actualizar este profesor?",
+                    title: "¿Quieres actualizar este alumno?",
                     icon: "question",
                     showCancelButton: true,
                     confirmButtonText: "Sí, actualizar",

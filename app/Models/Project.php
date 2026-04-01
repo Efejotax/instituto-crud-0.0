@@ -8,7 +8,7 @@ class Project extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'title',
         'description',
         'hours',
         'start_date',

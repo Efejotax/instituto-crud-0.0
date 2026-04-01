@@ -9,12 +9,11 @@ class Student extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'surname',
         'address',
         'email',
         'phone',
         'birthday',
-        'password'
+        'course'
     ];
 
     static public function getLabels(){

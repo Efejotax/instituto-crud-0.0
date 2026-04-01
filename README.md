@@ -73,3 +73,10 @@ php artisan migrate:fresh --seed
 limpieza de la caché de las rutas:
 php artisan route:clear
 php artisan route:list
+
+
+comandos borrar la cache de la rutas
+php artisan route:clear
+php artisan config:clear
+php artisan cache:clear
+

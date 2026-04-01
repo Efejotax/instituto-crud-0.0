@@ -17,6 +17,6 @@ class StudentSeeder extends Seeder
         //Student::factory()->create();
 
         //cear varios
-        Student::factory()->count(10)->create();
+        Student::factory()->count(40)->create();
     }
 }

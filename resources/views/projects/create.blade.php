@@ -6,15 +6,15 @@
 
             @csrf
 
-            <!-- Name -->
+            <!-- Title -->
             <div>
-                <x-input-label for="name" :value="__('Name')" />
+                <x-input-label for="title" :value="__('Title')" />
                 <x-text-input
-                    id="name"
+                    id="title"
                     class="block mt-1 w-full"
                     type="text"
-                    name="name"
-                    value="{{old('name')}}"
+                    name="title"
+                    value="{{old('title')}}"
                     required
                 />
             </div>
@@ -55,7 +55,7 @@
                     name="start_date"
                 />
             </div>
-
+            <!-- Button -->
             <div class="flex justify-end mt-6">
                 <x-primary-button>
                     {{ __('Create Project') }}

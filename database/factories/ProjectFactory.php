@@ -18,7 +18,7 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>$this->faker->name(),
+            'title'=>$this->faker->text(15),
             'description'=>$this->faker->text(255),
             'hours'=>$this->faker->randomFloat(2, 1, 9999),
             'start_date'=>$this->faker->date(),

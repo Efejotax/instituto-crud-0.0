@@ -2,9 +2,10 @@
 return [
     "name" => "Nom",
     "adress" => "Adresse",
-    "email" => "Email",
+    "email" => "Courriel",
     "phone" => "Téléphone",
     "birthday" => "Date de naissance",
     "password" => "Mot de passe",
-    "department" => "Département",
+    "course" => "Cours",
 ];
+
